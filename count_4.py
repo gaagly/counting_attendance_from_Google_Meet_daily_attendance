@@ -220,32 +220,3 @@ for name_of_class in get_list_of_classes(directories):
     print(
         f'Successfully written data for Class {name_of_class}, {len(get_stu_attendance_from_class_files(directories, name_of_class, *students_name_list))}')
     print('-----------------------------------------------------')
-
-# print(get_list_of_classes(directories))
-# print(get_names_from_class(directories, get_list_of_classes(directories)[3]))
-# print(len(get_names_from_class(directories,
-#                                get_list_of_classes(directories)[3])))
-# with open("Class 8 2020 (2020-07-29) (2).html", encoding="utf8") as html_file:
-
-#     # it is a list and each element is the line in the document
-#     lines = html_file.read().split("\n")
-
-
-# # print("Number of lines is {} in the HTML file".format(len(lines)))
-
-
-# # check_word_in_line = wrapper_example_function(check_word_in_line)
-# line_no = check_word_in_line(lines, 'let classList')[0]
-# student_names = get_value_of_variable(lines[line_no]).split(',')
-
-
-# # print(student_names)
-# # getting the arrival timings row
-# line_no = check_word_in_line(lines, 'let _arrivalTimes')[0]
-# number_of_present = 0
-# for student_name in student_names:
-#     if search_name(lines[line_no].lower(), student_name.lower()) == "Present":
-#         number_of_present = number_of_present + 1
-
-
-# print(number_of_present)
