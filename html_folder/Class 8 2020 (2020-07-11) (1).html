@@ -1,0 +1,375 @@
+
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript">
+		let className="Class 8 2020"
+		let classDate="2020-07-11"
+		let dateList=["2020-07-07","2020-07-08","2020-07-09","2020-07-11"]
+		let startTime="13:52"
+		let endTime="15:24"
+		let _activeMeetID="gav-fitd-asa"
+		let classList="jidnyesh bansode,pornima mhetre,birendra choudhray,basu singh,renuka badekar,nandu tawale,janendra yadav,kalyani kulkarni,jyoti pawar,kavita patil,sanchita mohare visions,dhruv adballe,anjali yadav,pawar sambhaji,bhagyashree sagar,raghav kamble,dhananjaj singh,anita gaikwad,jayshri borate,shobha myana,gayatri giri,shubham dharade,sandip sansare,rupesh barde,swati deshmukh,salma shaikh,chaitali nimse,pavan lipane,ramhari hange,om pisal,vijendra yadav,yash sharma,surekha bhogade,shreeja balwe,prathamesh pansare,sanjay sonkamble,Kamble Bala"
+		let _arrivalTimes="{\"f3e93a6c-c57b-48fb-baf2-026f13cb434d\":{\"name\":\"Jyoti Pawar\",\"arrived\":\"13:53\",\"last_seen\":\"13:54\",\"stayed\":2,\"checks\":[\"13:53\",\"13:54\"]},\"09d4900f-501b-406c-9ff6-08f4bb46f39b\":{\"name\":\"Kavita Patil\",\"arrived\":\"13:53\",\"last_seen\":\"13:56\",\"stayed\":4,\"checks\":[\"13:53\",\"13:54\",\"13:55\",\"13:56\"]},\"d821b69f-06c2-475c-afbf-a17c969d9dd8\":{\"name\":\"Sanchita Mohare visions\",\"arrived\":\"13:53\",\"last_seen\":\"13:54\",\"stayed\":1,\"checks\":[\"13:53\",\"13:54\"]},\"b66f5a16-5cc5-4657-87a5-f6c8dbbca314\":{\"name\":\"Dhruv Adballe\",\"arrived\":\"13:53\",\"last_seen\":\"14:36\",\"stayed\":39,\"checks\":[\"13:53\",\"13:54\",\"13:55\",\"13:56\",\"13:57\",\"13:58\",\"13:59\",\"14:00\",\"14:01\",\"14:02\",\"14:03\",\"14:04\",\"14:05\",\"14:06\",\"14:07\",\"14:08\",\"14:09\",\"14:10\",\"14:11\",\"14:12\",\"14:13\",\"14:14\",\"14:15\",\"14:16\",\"14:17\",\"14:18\",\"14:23\",\"14:24\",\"14:25\",\"14:26\",\"14:27\",\"14:28\",\"14:29\",\"14:30\",\"14:31\",\"14:32\",\"14:33\",\"14:34\",\"14:35\",\"14:36\"]},\"a0c05a51-b1e2-4593-b629-6e3d6d184460\":{\"name\":\"Janendra Yadav\",\"arrived\":\"13:54\",\"last_seen\":\"14:22\",\"stayed\":28,\"checks\":[\"13:54\",\"13:55\",\"13:56\",\"13:57\",\"13:58\",\"13:59\",\"14:00\",\"14:01\",\"14:03\",\"14:04\",\"14:05\",\"14:06\",\"14:07\",\"14:08\",\"14:09\",\"14:10\",\"14:11\",\"14:12\",\"14:13\",\"14:14\",\"14:15\",\"14:16\",\"14:17\",\"14:18\",\"14:19\",\"14:20\",\"14:21\",\"14:22\"]},\"3e07f819-a001-4a3d-915b-e2dc910eec90\":{\"name\":\"Anjali Yadav\",\"arrived\":\"13:54\",\"last_seen\":\"14:48\",\"stayed\":54,\"checks\":[\"13:54\",\"13:55\",\"13:56\",\"13:57\",\"13:58\",\"13:59\",\"14:00\",\"14:01\",\"14:02\",\"14:03\",\"14:04\",\"14:05\",\"14:06\",\"14:07\",\"14:08\",\"14:09\",\"14:10\",\"14:11\",\"14:12\",\"14:13\",\"14:14\",\"14:15\",\"14:16\",\"14:17\",\"14:18\",\"14:19\",\"14:20\",\"14:21\",\"14:23\",\"14:24\",\"14:25\",\"14:26\",\"14:27\",\"14:28\",\"14:29\",\"14:30\",\"14:31\",\"14:32\",\"14:33\",\"14:34\",\"14:35\",\"14:36\",\"14:37\",\"14:38\",\"14:39\",\"14:40\",\"14:41\",\"14:42\",\"14:43\",\"14:44\",\"14:45\",\"14:46\",\"14:47\",\"14:48\"]},\"8aee7fa9-6a6f-471f-ac9e-15ab6b1e68e1\":{\"name\":\"Pawar Sambhaji\",\"arrived\":\"13:54\",\"last_seen\":\"14:48\",\"stayed\":44,\"checks\":[\"13:54\",\"13:55\",\"13:56\",\"13:57\",\"14:00\",\"14:02\",\"14:05\",\"14:06\",\"14:07\",\"14:08\",\"14:09\",\"14:10\",\"14:11\",\"14:12\",\"14:15\",\"14:17\",\"14:18\",\"14:22\",\"14:23\",\"14:24\",\"14:25\",\"14:26\",\"14:27\",\"14:28\",\"14:29\",\"14:30\",\"14:31\",\"14:32\",\"14:33\",\"14:34\",\"14:35\",\"14:36\",\"14:37\",\"14:38\",\"14:39\",\"14:40\",\"14:41\",\"14:42\",\"14:43\",\"14:44\",\"14:45\",\"14:46\",\"14:47\",\"14:48\"]},\"1656dcb5-d5fc-49d4-a3f3-85abfe333f8d\":{\"name\":\"Bhagyashree Sagar\",\"arrived\":\"13:54\",\"last_seen\":\"14:08\",\"stayed\":15,\"checks\":[\"13:54\",\"13:55\",\"13:56\",\"13:57\",\"13:58\",\"13:59\",\"14:00\",\"14:01\",\"14:02\",\"14:03\",\"14:04\",\"14:05\",\"14:06\",\"14:07\",\"14:08\"]},\"7491a2cf-f9af-4f98-816f-3372bed76c25\":{\"name\":\"Raghav Kamble\",\"arrived\":\"13:54\",\"last_seen\":\"14:38\",\"stayed\":44,\"checks\":[\"13:54\",\"13:55\",\"13:56\",\"13:57\",\"13:58\",\"13:59\",\"14:00\",\"14:01\",\"14:02\",\"14:03\",\"14:04\",\"14:05\",\"14:06\",\"14:07\",\"14:08\",\"14:09\",\"14:10\",\"14:11\",\"14:12\",\"14:13\",\"14:14\",\"14:15\",\"14:16\",\"14:17\",\"14:18\",\"14:19\",\"14:20\",\"14:21\",\"14:22\",\"14:23\",\"14:24\",\"14:25\",\"14:26\",\"14:27\",\"14:28\",\"14:29\",\"14:30\",\"14:31\",\"14:32\",\"14:33\",\"14:34\",\"14:35\",\"14:36\",\"14:37\",\"14:38\"]},\"18afaa29-6200-434d-979c-58ad2c2aeb72\":{\"name\":\"Dhananjaj Singh\",\"arrived\":\"13:55\",\"last_seen\":\"14:48\",\"stayed\":53,\"checks\":[\"13:55\",\"13:56\",\"13:57\",\"13:58\",\"13:59\",\"14:00\",\"14:01\",\"14:02\",\"14:03\",\"14:04\",\"14:05\",\"14:06\",\"14:07\",\"14:08\",\"14:09\",\"14:10\",\"14:11\",\"14:12\",\"14:13\",\"14:14\",\"14:15\",\"14:16\",\"14:17\",\"14:18\",\"14:19\",\"14:20\",\"14:21\",\"14:22\",\"14:23\",\"14:24\",\"14:25\",\"14:26\",\"14:27\",\"14:28\",\"14:29\",\"14:30\",\"14:31\",\"14:32\",\"14:33\",\"14:34\",\"14:35\",\"14:36\",\"14:37\",\"14:38\",\"14:39\",\"14:40\",\"14:41\",\"14:42\",\"14:43\",\"14:44\",\"14:45\",\"14:46\",\"14:47\",\"14:48\"]},\"4ec2c5be-d3f5-4421-b587-226c78d2bfd1\":{\"name\":\"Sanchita Mohare visions\",\"arrived\":\"13:55\",\"last_seen\":\"13:57\",\"stayed\":2,\"checks\":[\"13:55\",\"13:56\",\"13:57\"]},\"054b3726-15e6-411e-9888-c62682ebf033\":{\"name\":\"Anita Gaikwad\",\"arrived\":\"13:56\",\"last_seen\":\"14:48\",\"stayed\":33,\"checks\":[\"13:56\",\"13:57\",\"13:58\",\"13:59\",\"14:00\",\"14:01\",\"14:02\",\"14:03\",\"14:04\",\"14:05\",\"14:06\",\"14:07\",\"14:09\",\"14:24\",\"14:29\",\"14:30\",\"14:31\",\"14:33\",\"14:34\",\"14:35\",\"14:36\",\"14:37\",\"14:38\",\"14:39\",\"14:40\",\"14:41\",\"14:42\",\"14:43\",\"14:44\",\"14:45\",\"14:46\",\"14:47\",\"14:48\"]},\"af77c892-6afd-403a-91bb-ed34b2ae1e9e\":{\"name\":\"jayshri borate\",\"arrived\":\"13:56\",\"last_seen\":\"14:38\",\"stayed\":42,\"checks\":[\"13:56\",\"13:58\",\"13:59\",\"14:00\",\"14:01\",\"14:02\",\"14:03\",\"14:04\",\"14:05\",\"14:06\",\"14:07\",\"14:08\",\"14:09\",\"14:10\",\"14:11\",\"14:12\",\"14:13\",\"14:14\",\"14:15\",\"14:16\",\"14:17\",\"14:18\",\"14:19\",\"14:20\",\"14:21\",\"14:22\",\"14:23\",\"14:24\",\"14:25\",\"14:26\",\"14:27\",\"14:28\",\"14:29\",\"14:30\",\"14:31\",\"14:32\",\"14:33\",\"14:34\",\"14:35\",\"14:36\",\"14:37\",\"14:38\"]},\"1a461e93-155b-4773-8e14-3ab5fafbafbe\":{\"name\":\"Jyoti Pawar\",\"arrived\":\"13:56\",\"last_seen\":\"13:57\",\"stayed\":2,\"checks\":[\"13:56\",\"13:57\"]},\"d61ca722-e24d-4713-833e-1098ef1ebd8d\":{\"name\":\"Shobha Myana\",\"arrived\":\"13:57\",\"last_seen\":\"13:57\",\"stayed\":0,\"checks\":[\"13:57\"]},\"aa2eed43-5040-4f1f-836d-ebb745ff7787\":{\"name\":\"GAYATRI GIRI\",\"arrived\":\"13:57\",\"last_seen\":\"14:33\",\"stayed\":30,\"checks\":[\"13:57\",\"14:01\",\"14:02\",\"14:03\",\"14:04\",\"14:05\",\"14:06\",\"14:07\",\"14:08\",\"14:09\",\"14:13\",\"14:14\",\"14:15\",\"14:16\",\"14:17\",\"14:18\",\"14:19\",\"14:20\",\"14:21\",\"14:22\",\"14:23\",\"14:24\",\"14:25\",\"14:26\",\"14:27\",\"14:28\",\"14:29\",\"14:30\",\"14:31\",\"14:32\",\"14:33\"]},\"949158ca-dd75-4cb8-8671-d5dd277771ac\":{\"name\":\"shubham Dharade\",\"arrived\":\"13:57\",\"last_seen\":\"14:48\",\"stayed\":38,\"checks\":[\"13:57\",\"14:02\",\"14:13\",\"14:14\",\"14:15\",\"14:16\",\"14:17\",\"14:18\",\"14:19\",\"14:20\",\"14:21\",\"14:22\",\"14:23\",\"14:24\",\"14:25\",\"14:26\",\"14:27\",\"14:28\",\"14:29\",\"14:30\",\"14:31\",\"14:32\",\"14:33\",\"14:34\",\"14:35\",\"14:36\",\"14:37\",\"14:38\",\"14:39\",\"14:40\",\"14:41\",\"14:42\",\"14:43\",\"14:44\",\"14:45\",\"14:46\",\"14:47\",\"14:48\"]},\"61ddc76c-2600-418a-a9b4-9365bc3f2a4e\":{\"name\":\"Sandip Sansare\",\"arrived\":\"13:57\",\"last_seen\":\"14:02\",\"stayed\":5,\"checks\":[\"13:57\",\"13:58\",\"13:59\",\"14:00\",\"14:02\"]},\"ccd98715-ac21-4cc3-a03d-e44829d15b0b\":{\"name\":\"Rupesh barde\",\"arrived\":\"13:57\",\"last_seen\":\"13:57\",\"stayed\":1,\"checks\":[\"13:57\"]},\"27e511da-712f-41fb-ba6a-13d9c16c300b\":{\"name\":\"Swati Deshmukh\",\"arrived\":\"13:57\",\"last_seen\":\"14:02\",\"stayed\":5,\"checks\":[\"13:57\",\"13:58\",\"13:59\",\"14:00\",\"14:01\",\"14:02\"]},\"8c6aa9a5-87ea-4b1d-93f8-6c0ff72579a5\":{\"name\":\"Salma Shaikh\",\"arrived\":\"13:58\",\"last_seen\":\"13:58\",\"stayed\":0,\"checks\":[\"13:58\"]},\"fbc696d3-d6b8-4b26-ab9d-bfe0cd271313\":{\"name\":\"Kavita Patil\",\"arrived\":\"13:58\",\"last_seen\":\"13:58\",\"stayed\":0,\"checks\":[\"13:58\"]},\"72e024f0-735e-4a1a-aaf9-1c3eed1afa61\":{\"name\":\"Sanchita Mohare visions\",\"arrived\":\"13:58\",\"last_seen\":\"13:58\",\"stayed\":1,\"checks\":[\"13:58\"]},\"20bec634-9566-4a2f-9628-fe9a08f902b3\":{\"name\":\"Jyoti Pawar\",\"arrived\":\"13:58\",\"last_seen\":\"14:03\",\"stayed\":6,\"checks\":[\"13:58\",\"13:59\",\"14:00\",\"14:01\",\"14:02\",\"14:03\"]},\"9cf6087c-1199-4390-99e1-80562d8e182f\":{\"name\":\"Shobha Myana\",\"arrived\":\"13:58\",\"last_seen\":\"13:58\",\"stayed\":1,\"checks\":[\"13:58\"]},\"fc86391d-4d5f-4653-a609-0c7cb08b7c10\":{\"name\":\"Chaitali Nimse\",\"arrived\":\"13:58\",\"last_seen\":\"13:58\",\"stayed\":0,\"checks\":[\"13:58\"]},\"3d857cf6-91fd-4287-9add-050739b7e94b\":{\"name\":\"Chaitali Nimse\",\"arrived\":\"13:59\",\"last_seen\":\"14:08\",\"stayed\":9,\"checks\":[\"13:59\",\"14:00\",\"14:01\",\"14:03\",\"14:04\",\"14:05\",\"14:06\",\"14:07\",\"14:08\"]},\"b2575d46-06b3-4337-9b3d-ee617993c8ec\":{\"name\":\"Pavan Lipane\",\"arrived\":\"13:59\",\"last_seen\":\"14:01\",\"stayed\":2,\"checks\":[\"13:59\",\"14:00\",\"14:01\"]},\"8155a3a1-dc84-401e-81bb-8752add78a11\":{\"name\":\"Ramhari Hange\",\"arrived\":\"13:59\",\"last_seen\":\"13:59\",\"stayed\":1,\"checks\":[\"13:59\"]},\"d25d9ae8-3b9c-419b-817e-fed6c22b95b8\":{\"name\":\"Kavita Patil\",\"arrived\":\"13:59\",\"last_seen\":\"14:04\",\"stayed\":2,\"checks\":[\"13:59\",\"14:02\",\"14:04\"]},\"50c603dd-5aea-4aef-a71e-6a68aee25208\":{\"name\":\"Ramhari Hange\",\"arrived\":\"14:00\",\"last_seen\":\"14:00\",\"stayed\":1,\"checks\":[\"14:00\"]},\"2cc858fc-0572-46b9-8733-845ca35bb713\":{\"name\":\"Sanchita Mohare visions\",\"arrived\":\"14:00\",\"last_seen\":\"14:15\",\"stayed\":13,\"checks\":[\"14:00\",\"14:02\",\"14:03\",\"14:04\",\"14:05\",\"14:06\",\"14:07\",\"14:08\",\"14:09\",\"14:10\",\"14:11\",\"14:12\",\"14:15\"]},\"dbdbe3d4-e7e3-4771-95c6-c6d2cbf6b1f9\":{\"name\":\"Shobha Myana\",\"arrived\":\"14:00\",\"last_seen\":\"14:48\",\"stayed\":48,\"checks\":[\"14:00\",\"14:02\",\"14:03\",\"14:04\",\"14:05\",\"14:06\",\"14:07\",\"14:08\",\"14:09\",\"14:10\",\"14:11\",\"14:12\",\"14:13\",\"14:14\",\"14:15\",\"14:16\",\"14:17\",\"14:18\",\"14:19\",\"14:20\",\"14:21\",\"14:22\",\"14:23\",\"14:24\",\"14:25\",\"14:26\",\"14:27\",\"14:28\",\"14:29\",\"14:30\",\"14:31\",\"14:32\",\"14:33\",\"14:34\",\"14:35\",\"14:36\",\"14:37\",\"14:38\",\"14:39\",\"14:40\",\"14:41\",\"14:42\",\"14:43\",\"14:44\",\"14:45\",\"14:46\",\"14:47\",\"14:48\"]},\"b2193b74-8863-4028-82c8-a49f43637fbd\":{\"name\":\"Ramhari Hange\",\"arrived\":\"14:01\",\"last_seen\":\"14:02\",\"stayed\":1,\"checks\":[\"14:01\",\"14:02\"]},\"4bc2c34a-6b4f-4633-af17-f76c5c85c024\":{\"name\":\"Rupesh barde\",\"arrived\":\"14:01\",\"last_seen\":\"14:14\",\"stayed\":7,\"checks\":[\"14:01\",\"14:02\",\"14:05\",\"14:06\",\"14:07\",\"14:09\",\"14:13\",\"14:14\"]},\"ed3d6350-d088-4402-91d7-b5ac36c649d0\":{\"name\":\"Salma Shaikh\",\"arrived\":\"14:02\",\"last_seen\":\"14:02\",\"stayed\":1,\"checks\":[\"14:02\"]},\"db354c83-eaf8-44fb-a0d6-b8d24c52f910\":{\"name\":\"Pavan Lipane\",\"arrived\":\"14:02\",\"last_seen\":\"14:02\",\"stayed\":1,\"checks\":[\"14:02\"]},\"0d16e87f-56e1-4dce-a557-4190da84f8be\":{\"name\":\"Pavan Lipane\",\"arrived\":\"14:04\",\"last_seen\":\"14:06\",\"stayed\":3,\"checks\":[\"14:04\",\"14:05\",\"14:06\"]},\"5ed3236a-ea4d-4c90-9fc0-3abe8732f0ab\":{\"name\":\"Swati Deshmukh\",\"arrived\":\"14:04\",\"last_seen\":\"14:04\",\"stayed\":0,\"checks\":[\"14:04\"]},\"88e1e440-cb5e-4453-8623-86fad58c6142\":{\"name\":\"Sandip Sansare\",\"arrived\":\"14:04\",\"last_seen\":\"14:13\",\"stayed\":6,\"checks\":[\"14:04\",\"14:05\",\"14:07\",\"14:10\",\"14:11\",\"14:12\",\"14:13\"]},\"5eb75f31-3cc8-4dd6-b72e-0a0bdf9e48a5\":{\"name\":\"Jyoti Pawar\",\"arrived\":\"14:05\",\"last_seen\":\"14:06\",\"stayed\":2,\"checks\":[\"14:05\",\"14:06\"]},\"a385e56b-edeb-411e-a271-7bb90965878c\":{\"name\":\"Swati Deshmukh\",\"arrived\":\"14:05\",\"last_seen\":\"14:05\",\"stayed\":0,\"checks\":[\"14:05\"]},\"60dace08-b839-4071-9b2f-93b1a2da6ae9\":{\"name\":\"Swati Deshmukh\",\"arrived\":\"14:06\",\"last_seen\":\"14:06\",\"stayed\":1,\"checks\":[\"14:06\"]},\"524a8eb1-560a-4dc8-a842-dd6dac7ef75b\":{\"name\":\"Pavan Lipane\",\"arrived\":\"14:07\",\"last_seen\":\"14:08\",\"stayed\":2,\"checks\":[\"14:07\",\"14:08\"]},\"0c9b2c76-963d-4aae-a7e3-472f689bb3c1\":{\"name\":\"Jyoti Pawar\",\"arrived\":\"14:07\",\"last_seen\":\"14:23\",\"stayed\":4,\"checks\":[\"14:07\",\"14:09\",\"14:22\",\"14:23\"]},\"5b6b97ad-16cb-4a70-bcad-33e43461677a\":{\"name\":\"Ramhari Hange\",\"arrived\":\"14:07\",\"last_seen\":\"14:39\",\"stayed\":3,\"checks\":[\"14:07\",\"14:24\",\"14:30\",\"14:39\"]},\"56aeb18d-37ee-457c-a7bc-340578ade472\":{\"name\":\"Swati Deshmukh\",\"arrived\":\"14:08\",\"last_seen\":\"14:08\",\"stayed\":0,\"checks\":[\"14:08\"]},\"ae32df5a-4f53-485e-99aa-f6e2a0814798\":{\"name\":\"Swati Deshmukh\",\"arrived\":\"14:08\",\"last_seen\":\"14:08\",\"stayed\":0,\"checks\":[\"14:08\"]},\"c5a298cb-1b60-499e-8262-10cebf2f7a58\":{\"name\":\"Chaitali Nimse\",\"arrived\":\"14:09\",\"last_seen\":\"14:09\",\"stayed\":0,\"checks\":[\"14:09\"]},\"9fef946c-f20c-4cb7-8c6f-c8c9c2e5c40d\":{\"name\":\"Bhagyashree Sagar\",\"arrived\":\"14:09\",\"last_seen\":\"14:23\",\"stayed\":14,\"checks\":[\"14:09\",\"14:10\",\"14:11\",\"14:12\",\"14:13\",\"14:14\",\"14:15\",\"14:16\",\"14:17\",\"14:18\",\"14:19\",\"14:20\",\"14:21\",\"14:22\",\"14:23\"]},\"7a710b5f-e47d-4de6-af76-e97ee3b58905\":{\"name\":\"Salma Shaikh\",\"arrived\":\"14:09\",\"last_seen\":\"14:48\",\"stayed\":4,\"checks\":[\"14:09\",\"14:24\",\"14:46\",\"14:47\",\"14:48\"]},\"a1e3201e-95f4-4696-974d-63e95f48e63d\":{\"name\":\"Chaitali Nimse\",\"arrived\":\"14:09\",\"last_seen\":\"14:28\",\"stayed\":17,\"checks\":[\"14:09\",\"14:10\",\"14:11\",\"14:12\",\"14:13\",\"14:14\",\"14:15\",\"14:16\",\"14:17\",\"14:18\",\"14:19\",\"14:20\",\"14:23\",\"14:24\",\"14:25\",\"14:26\",\"14:27\",\"14:28\"]},\"17361670-8cde-4a4d-967e-38669ad39374\":{\"name\":\"Pavan Lipane\",\"arrived\":\"14:10\",\"last_seen\":\"14:12\",\"stayed\":3,\"checks\":[\"14:10\",\"14:11\",\"14:12\"]},\"ec4c635a-a8fa-48c6-8c4f-a8b91e83a391\":{\"name\":\"Kavita Patil\",\"arrived\":\"14:13\",\"last_seen\":\"14:13\",\"stayed\":0,\"checks\":[\"14:13\"]},\"14602ae7-286f-461e-91eb-b19498321ce4\":{\"name\":\"Pavan Lipane\",\"arrived\":\"14:14\",\"last_seen\":\"14:14\",\"stayed\":1,\"checks\":[\"14:14\"]},\"93c094ae-e758-49e3-b8d0-310b3c7e3dac\":{\"name\":\"Kavita Patil\",\"arrived\":\"14:14\",\"last_seen\":\"14:14\",\"stayed\":0,\"checks\":[\"14:14\"]},\"c46db28f-ff1c-4871-851b-5bc4b147a0db\":{\"name\":\"Pavan Lipane\",\"arrived\":\"14:15\",\"last_seen\":\"14:16\",\"stayed\":1,\"checks\":[\"14:15\",\"14:16\"]},\"9db619fe-0f0e-4990-8d7f-49700eca9fe3\":{\"name\":\"Rupesh barde\",\"arrived\":\"14:15\",\"last_seen\":\"14:48\",\"stayed\":30,\"checks\":[\"14:15\",\"14:19\",\"14:20\",\"14:21\",\"14:22\",\"14:23\",\"14:24\",\"14:25\",\"14:26\",\"14:27\",\"14:28\",\"14:29\",\"14:30\",\"14:31\",\"14:32\",\"14:33\",\"14:34\",\"14:35\",\"14:36\",\"14:37\",\"14:38\",\"14:39\",\"14:40\",\"14:41\",\"14:42\",\"14:43\",\"14:44\",\"14:45\",\"14:46\",\"14:47\",\"14:48\"]},\"1d344bad-838f-496d-9abe-d5e4ac9a21d1\":{\"name\":\"Sandip Sansare\",\"arrived\":\"14:15\",\"last_seen\":\"14:29\",\"stayed\":9,\"checks\":[\"14:15\",\"14:21\",\"14:22\",\"14:23\",\"14:24\",\"14:25\",\"14:26\",\"14:27\",\"14:28\",\"14:29\"]},\"dca22bf3-17a3-4260-9658-0edd24171e88\":{\"name\":\"Kavita Patil\",\"arrived\":\"14:15\",\"last_seen\":\"14:48\",\"stayed\":32,\"checks\":[\"14:15\",\"14:16\",\"14:17\",\"14:18\",\"14:19\",\"14:20\",\"14:21\",\"14:23\",\"14:24\",\"14:25\",\"14:26\",\"14:27\",\"14:28\",\"14:29\",\"14:30\",\"14:31\",\"14:32\",\"14:33\",\"14:34\",\"14:35\",\"14:36\",\"14:37\",\"14:38\",\"14:39\",\"14:40\",\"14:41\",\"14:42\",\"14:43\",\"14:44\",\"14:45\",\"14:46\",\"14:47\",\"14:48\"]},\"bb4e06b7-2ef8-4693-add9-f6214debe1ef\":{\"name\":\"Pavan Lipane\",\"arrived\":\"14:17\",\"last_seen\":\"14:17\",\"stayed\":0,\"checks\":[\"14:17\"]},\"ba6c1ab7-10a2-4b8d-b3f4-0be82484c463\":{\"name\":\"Pavan Lipane\",\"arrived\":\"14:19\",\"last_seen\":\"14:23\",\"stayed\":5,\"checks\":[\"14:19\",\"14:20\",\"14:21\",\"14:22\",\"14:23\"]},\"cfd32c2b-bd8b-45fd-9f00-027cf7140e37\":{\"name\":\"Sanchita Mohare visions\",\"arrived\":\"14:19\",\"last_seen\":\"14:19\",\"stayed\":0,\"checks\":[\"14:19\"]},\"dfd997df-1f71-48ac-9c60-4f6afb366248\":{\"name\":\"Bhagyashree Sagar\",\"arrived\":\"14:24\",\"last_seen\":\"14:45\",\"stayed\":21,\"checks\":[\"14:24\",\"14:25\",\"14:26\",\"14:27\",\"14:28\",\"14:29\",\"14:30\",\"14:31\",\"14:32\",\"14:33\",\"14:34\",\"14:35\",\"14:36\",\"14:37\",\"14:38\",\"14:39\",\"14:40\",\"14:41\",\"14:42\",\"14:43\",\"14:44\",\"14:45\"]},\"04eeebc0-d2d3-4196-8cec-d75b207fe1fe\":{\"name\":\"Pavan Lipane\",\"arrived\":\"14:25\",\"last_seen\":\"14:33\",\"stayed\":9,\"checks\":[\"14:25\",\"14:26\",\"14:27\",\"14:28\",\"14:29\",\"14:30\",\"14:31\",\"14:32\",\"14:33\"]},\"0d052a31-7cf0-43ef-9ef0-2a7ff0661a2a\":{\"name\":\"Jyoti Pawar\",\"arrived\":\"14:25\",\"last_seen\":\"14:48\",\"stayed\":24,\"checks\":[\"14:25\",\"14:26\",\"14:27\",\"14:28\",\"14:29\",\"14:30\",\"14:31\",\"14:32\",\"14:33\",\"14:34\",\"14:35\",\"14:36\",\"14:37\",\"14:38\",\"14:39\",\"14:40\",\"14:41\",\"14:42\",\"14:43\",\"14:44\",\"14:45\",\"14:46\",\"14:47\",\"14:48\"]},\"e874d3c8-e6cd-4ff2-9c1b-30e2b1a8c2ef\":{\"name\":\"Chaitali Nimse\",\"arrived\":\"14:29\",\"last_seen\":\"14:48\",\"stayed\":16,\"checks\":[\"14:29\",\"14:33\",\"14:34\",\"14:35\",\"14:36\",\"14:37\",\"14:38\",\"14:39\",\"14:40\",\"14:41\",\"14:42\",\"14:43\",\"14:44\",\"14:45\",\"14:46\",\"14:47\",\"14:48\"]},\"df0d3e06-e39d-469a-bed9-fc45c7dc61b5\":{\"name\":\"Swati Deshmukh\",\"arrived\":\"14:31\",\"last_seen\":\"14:31\",\"stayed\":1,\"checks\":[\"14:31\"]},\"b33ec427-5bed-47e0-afb9-1ab9a60dd0fe\":{\"name\":\"Swati Deshmukh\",\"arrived\":\"14:32\",\"last_seen\":\"14:32\",\"stayed\":1,\"checks\":[\"14:32\"]},\"04c7c415-9258-4ba2-9f00-7e484c61124b\":{\"name\":\"Sandip Sansare\",\"arrived\":\"14:32\",\"last_seen\":\"14:48\",\"stayed\":16,\"checks\":[\"14:32\",\"14:34\",\"14:35\",\"14:36\",\"14:37\",\"14:38\",\"14:39\",\"14:40\",\"14:41\",\"14:42\",\"14:43\",\"14:44\",\"14:45\",\"14:46\",\"14:47\",\"14:48\"]},\"1e907090-85d2-451b-8df8-0ce07d253f7f\":{\"name\":\"Swati Deshmukh\",\"arrived\":\"14:33\",\"last_seen\":\"14:48\",\"stayed\":14,\"checks\":[\"14:33\",\"14:34\",\"14:37\",\"14:38\",\"14:39\",\"14:40\",\"14:41\",\"14:42\",\"14:43\",\"14:44\",\"14:45\",\"14:46\",\"14:47\",\"14:48\"]},\"e842a426-da93-4279-a775-f827ad3614b0\":{\"name\":\"Pavan Lipane\",\"arrived\":\"14:34\",\"last_seen\":\"14:34\",\"stayed\":0,\"checks\":[\"14:34\"]},\"ba6347ea-bdb1-427f-ac12-02579232fda9\":{\"name\":\"GAYATRI GIRI\",\"arrived\":\"14:34\",\"last_seen\":\"14:48\",\"stayed\":14,\"checks\":[\"14:34\",\"14:35\",\"14:36\",\"14:37\",\"14:38\",\"14:39\",\"14:40\",\"14:41\",\"14:42\",\"14:43\",\"14:44\",\"14:45\",\"14:46\",\"14:47\",\"14:48\"]},\"d7b6bb00-7368-4269-a12e-d6bb561c6d2b\":{\"name\":\"Raghav Kamble\",\"arrived\":\"14:39\",\"last_seen\":\"14:48\",\"stayed\":10,\"checks\":[\"14:39\",\"14:40\",\"14:41\",\"14:42\",\"14:43\",\"14:44\",\"14:45\",\"14:46\",\"14:47\",\"14:48\"]},\"c0d120e1-3d78-4e50-af55-16598fded2e6\":{\"name\":\"jayshri borate\",\"arrived\":\"14:39\",\"last_seen\":\"14:39\",\"stayed\":0,\"checks\":[\"14:39\"]},\"8ca12815-d93e-428e-a720-ea46dbd86d69\":{\"name\":\"Pavan Lipane\",\"arrived\":\"14:40\",\"last_seen\":\"14:45\",\"stayed\":6,\"checks\":[\"14:40\",\"14:41\",\"14:42\",\"14:43\",\"14:44\",\"14:45\"]},\"baf56756-2bfb-4007-a363-e2cec083b06d\":{\"name\":\"Ramhari Hange\",\"arrived\":\"14:43\",\"last_seen\":\"14:43\",\"stayed\":0,\"checks\":[\"14:43\"]},\"7f70a47e-4de7-437a-b2e5-9007405d6dbd\":{\"name\":\"Dhruv Adballe\",\"arrived\":\"14:44\",\"last_seen\":\"14:44\",\"stayed\":1,\"checks\":[\"14:44\"]},\"a473ca72-650a-4e72-9a1e-dd83dc64960c\":{\"name\":\"Dhruv Adballe\",\"arrived\":\"14:45\",\"last_seen\":\"14:45\",\"stayed\":0,\"checks\":[\"14:45\"]},\"66163870-dac6-4f9c-94e9-fa8b947343eb\":{\"name\":\"Pavan Lipane\",\"arrived\":\"14:46\",\"last_seen\":\"14:47\",\"stayed\":2,\"checks\":[\"14:46\",\"14:47\"]},\"86f7f8c2-0e99-4378-ba63-345f414e4145\":{\"name\":\"Bhagyashree Sagar\",\"arrived\":\"14:46\",\"last_seen\":\"14:46\",\"stayed\":0,\"checks\":[\"14:46\"]},\"24fd7c19-6a9e-4817-b831-46b4c8332810\":{\"name\":\"Pavan Lipane\",\"arrived\":\"14:48\",\"last_seen\":\"14:48\",\"stayed\":1,\"checks\":[\"14:48\"]},\"258e93bd-f9b1-4baf-8714-363226db4327\":{\"name\":\"OM PISAL\",\"arrived\":\"14:50\",\"last_seen\":\"15:00\",\"stayed\":11,\"checks\":[\"14:50\",\"14:51\",\"14:52\",\"14:53\",\"14:54\",\"14:55\",\"14:56\",\"14:57\",\"14:58\",\"14:59\",\"15:00\"]},\"86f16c75-20b8-4f69-b16a-2c83cb3ee6c6\":{\"name\":\"Dhananjaj Singh\",\"arrived\":\"14:50\",\"last_seen\":\"14:59\",\"stayed\":4,\"checks\":[\"14:50\",\"14:51\",\"14:52\",\"14:59\"]},\"45b76ccf-b81d-4dd6-a76d-971e4f93af61\":{\"name\":\"Vijendra Yadav\",\"arrived\":\"14:50\",\"last_seen\":\"15:05\",\"stayed\":16,\"checks\":[\"14:50\",\"14:51\",\"14:52\",\"14:53\",\"14:54\",\"14:55\",\"14:56\",\"14:57\",\"14:58\",\"14:59\",\"15:00\",\"15:01\",\"15:02\",\"15:03\",\"15:04\",\"15:05\"]},\"1b17083c-54c0-4589-b130-89d6b10b437a\":{\"name\":\"Jyoti Pawar\",\"arrived\":\"14:50\",\"last_seen\":\"15:04\",\"stayed\":15,\"checks\":[\"14:50\",\"14:51\",\"14:52\",\"14:53\",\"14:54\",\"14:55\",\"14:56\",\"14:57\",\"14:58\",\"14:59\",\"15:00\",\"15:01\",\"15:02\",\"15:03\",\"15:04\"]},\"a410c6db-f596-4b8a-8711-831489a037d3\":{\"name\":\"Anjali Yadav\",\"arrived\":\"14:50\",\"last_seen\":\"15:05\",\"stayed\":16,\"checks\":[\"14:50\",\"14:51\",\"14:52\",\"14:53\",\"14:54\",\"14:55\",\"14:56\",\"14:57\",\"14:58\",\"14:59\",\"15:00\",\"15:01\",\"15:02\",\"15:03\",\"15:04\",\"15:05\"]},\"754f3271-0dd6-44e4-baa1-54379f64de72\":{\"name\":\"Yash Sharma\",\"arrived\":\"14:50\",\"last_seen\":\"15:05\",\"stayed\":16,\"checks\":[\"14:50\",\"14:51\",\"14:52\",\"14:53\",\"14:54\",\"14:55\",\"14:56\",\"14:57\",\"14:58\",\"14:59\",\"15:00\",\"15:01\",\"15:02\",\"15:03\",\"15:04\",\"15:05\"]},\"da8b5065-6214-4c9e-8743-3b6ff3af204e\":{\"name\":\"jayshri borate\",\"arrived\":\"14:50\",\"last_seen\":\"14:51\",\"stayed\":2,\"checks\":[\"14:50\",\"14:51\"]},\"4b9fb2ca-4275-455c-9804-20b0580b0aee\":{\"name\":\"Raghav Kamble\",\"arrived\":\"14:50\",\"last_seen\":\"15:05\",\"stayed\":15,\"checks\":[\"14:50\",\"14:51\",\"14:52\",\"14:53\",\"14:54\",\"14:55\",\"14:56\",\"14:57\",\"14:58\",\"14:59\",\"15:00\",\"15:01\",\"15:02\",\"15:03\",\"15:04\",\"15:05\"]},\"73e811f7-c7a9-4644-beab-604ea3c5525f\":{\"name\":\"Bhagyashree Sagar\",\"arrived\":\"14:50\",\"last_seen\":\"14:58\",\"stayed\":8,\"checks\":[\"14:50\",\"14:51\",\"14:52\",\"14:53\",\"14:54\",\"14:55\",\"14:56\",\"14:57\",\"14:58\"]},\"ae6d1c54-9f5a-46cd-8282-c4e71d8dd77b\":{\"name\":\"shubham Dharade\",\"arrived\":\"14:51\",\"last_seen\":\"14:51\",\"stayed\":1,\"checks\":[\"14:51\"]},\"bfb1ced9-e8a5-467a-9a17-37f59387f371\":{\"name\":\"Dhruv Adballe\",\"arrived\":\"14:51\",\"last_seen\":\"14:52\",\"stayed\":2,\"checks\":[\"14:51\",\"14:52\"]},\"657f187b-8ae9-4bbe-97a9-ee60ff0b464e\":{\"name\":\"Pavan Lipane\",\"arrived\":\"14:51\",\"last_seen\":\"14:51\",\"stayed\":1,\"checks\":[\"14:51\"]},\"d4c4ae9c-3285-418b-8ef5-aeadca77d34b\":{\"name\":\"Shobha Myana\",\"arrived\":\"14:51\",\"last_seen\":\"15:03\",\"stayed\":13,\"checks\":[\"14:51\",\"14:52\",\"14:53\",\"14:54\",\"14:55\",\"14:56\",\"14:57\",\"14:58\",\"14:59\",\"15:00\",\"15:01\",\"15:02\",\"15:03\"]},\"7a96f943-5a69-4f2b-87b8-a3d448c381f7\":{\"name\":\"Kavita Patil\",\"arrived\":\"14:51\",\"last_seen\":\"14:59\",\"stayed\":9,\"checks\":[\"14:51\",\"14:52\",\"14:53\",\"14:54\",\"14:55\",\"14:56\",\"14:57\",\"14:58\",\"14:59\"]},\"f50b076c-01be-4842-9f18-a30af70e0e2b\":{\"name\":\"Surekha Bhogade\",\"arrived\":\"14:51\",\"last_seen\":\"14:51\",\"stayed\":0,\"checks\":[\"14:51\"]},\"cca93015-086b-40e4-9c7e-1c4266ce48b0\":{\"name\":\"Pawar Sambhaji\",\"arrived\":\"14:51\",\"last_seen\":\"14:51\",\"stayed\":1,\"checks\":[\"14:51\"]},\"d1b10d49-a5d1-4534-b366-2c6b9112cf71\":{\"name\":\"Shreeja Balwe\",\"arrived\":\"14:51\",\"last_seen\":\"14:51\",\"stayed\":1,\"checks\":[\"14:51\"]},\"9d750552-edac-47d3-9ff6-ada648ed5a0b\":{\"name\":\"Swati Deshmukh\",\"arrived\":\"14:51\",\"last_seen\":\"14:52\",\"stayed\":1,\"checks\":[\"14:51\",\"14:52\"]},\"85812d9a-b801-4722-af4f-c944bd80c415\":{\"name\":\"Ramhari Hange\",\"arrived\":\"14:52\",\"last_seen\":\"15:05\",\"stayed\":12,\"checks\":[\"14:52\",\"14:53\",\"14:56\",\"14:57\",\"14:58\",\"14:59\",\"15:00\",\"15:01\",\"15:02\",\"15:03\",\"15:04\",\"15:05\"]},\"70e495f9-d17e-479b-afc7-f882a325df2d\":{\"name\":\"Anita Gaikwad\",\"arrived\":\"14:52\",\"last_seen\":\"14:52\",\"stayed\":1,\"checks\":[\"14:52\"]},\"a4ec2d50-38d2-4359-8fd9-f666ebf1c882\":{\"name\":\"Prathamesh Pansare\",\"arrived\":\"14:52\",\"last_seen\":\"14:52\",\"stayed\":1,\"checks\":[\"14:52\"]},\"e7f8e7ca-e386-42bc-9e46-84100e7bbd46\":{\"name\":\"GAYATRI GIRI\",\"arrived\":\"14:52\",\"last_seen\":\"15:05\",\"stayed\":12,\"checks\":[\"14:52\",\"14:54\",\"14:55\",\"14:56\",\"14:57\",\"14:58\",\"14:59\",\"15:00\",\"15:01\",\"15:02\",\"15:03\",\"15:04\",\"15:05\"]},\"2df0839f-3a1c-4977-8636-42f5749a258e\":{\"name\":\"sanjay sonkamble\",\"arrived\":\"14:52\",\"last_seen\":\"15:05\",\"stayed\":12,\"checks\":[\"14:52\",\"14:53\",\"14:54\",\"14:55\",\"14:56\",\"14:57\",\"14:58\",\"14:59\",\"15:00\",\"15:01\",\"15:04\",\"15:05\"]},\"a262df93-6863-4c0c-8374-9d650a46752b\":{\"name\":\"Salma Shaikh\",\"arrived\":\"14:52\",\"last_seen\":\"14:52\",\"stayed\":0,\"checks\":[\"14:52\"]},\"c6ddfb74-dba3-4e55-821e-2bed5a3b9ea4\":{\"name\":\"Pavan Lipane\",\"arrived\":\"14:53\",\"last_seen\":\"14:53\",\"stayed\":0,\"checks\":[\"14:53\"]},\"416a0ec0-a0b1-4e94-b0db-1341fb8dfda3\":{\"name\":\"shubham Dharade\",\"arrived\":\"14:53\",\"last_seen\":\"14:54\",\"stayed\":2,\"checks\":[\"14:53\",\"14:54\"]},\"60339232-2f35-4b71-a508-5cb55f2331d0\":{\"name\":\"Kamble Bala\",\"arrived\":\"14:53\",\"last_seen\":\"15:05\",\"stayed\":9,\"checks\":[\"14:53\",\"14:54\",\"14:55\",\"14:56\",\"14:57\",\"14:58\",\"14:59\",\"15:01\",\"15:05\"]},\"543c6e17-35f0-4840-aa97-1710d76feca2\":{\"name\":\"Swati Deshmukh\",\"arrived\":\"14:53\",\"last_seen\":\"14:53\",\"stayed\":0,\"checks\":[\"14:53\"]},\"7d385515-ddfe-4e0c-baf6-a9cd7a215598\":{\"name\":\"Chaitali Nimse\",\"arrived\":\"14:53\",\"last_seen\":\"14:53\",\"stayed\":1,\"checks\":[\"14:53\"]},\"60ebedca-d1dc-47bd-a192-009391cf4cd0\":{\"name\":\"Anita Gaikwad\",\"arrived\":\"14:53\",\"last_seen\":\"14:59\",\"stayed\":7,\"checks\":[\"14:53\",\"14:54\",\"14:55\",\"14:56\",\"14:57\",\"14:58\",\"14:59\"]},\"0bc6316e-fc5e-47bd-b44d-5d3bb0a2ca0e\":{\"name\":\"Prathamesh Pansare\",\"arrived\":\"14:53\",\"last_seen\":\"14:53\",\"stayed\":1,\"checks\":[\"14:53\"]},\"4ccab28d-77e1-4460-ae14-2b460aa0f5ee\":{\"name\":\"Sanchita Mohare visions\",\"arrived\":\"14:53\",\"last_seen\":\"14:55\",\"stayed\":2,\"checks\":[\"14:53\",\"14:54\",\"14:55\"]},\"b8b63425-b669-481e-b619-52c414952d9d\":{\"name\":\"Pavan Lipane\",\"arrived\":\"14:54\",\"last_seen\":\"15:00\",\"stayed\":6,\"checks\":[\"14:54\",\"14:55\",\"14:56\",\"14:57\",\"14:58\",\"14:59\",\"15:00\"]},\"d463522a-3d29-49eb-a5d2-5b7fec307aa1\":{\"name\":\"Swati Deshmukh\",\"arrived\":\"14:54\",\"last_seen\":\"14:55\",\"stayed\":2,\"checks\":[\"14:54\",\"14:55\"]},\"8a1d31df-c057-4287-8217-42b18a0a30ef\":{\"name\":\"Janendra Yadav\",\"arrived\":\"14:54\",\"last_seen\":\"15:23\",\"stayed\":29,\"checks\":[\"14:54\",\"14:55\",\"14:56\",\"14:57\",\"14:58\",\"14:59\",\"15:00\",\"15:01\",\"15:02\",\"15:03\",\"15:04\",\"15:05\",\"15:06\",\"15:07\",\"15:08\",\"15:09\",\"15:10\",\"15:11\",\"15:12\",\"15:13\",\"15:14\",\"15:15\",\"15:16\",\"15:17\",\"15:18\",\"15:19\",\"15:20\",\"15:21\",\"15:22\",\"15:23\"]},\"9109f524-ef09-4749-b713-4ffb1e702fcd\":{\"name\":\"Sanchita Mohare visions\",\"arrived\":\"14:56\",\"last_seen\":\"14:56\",\"stayed\":0,\"checks\":[\"14:56\"]},\"7d945411-263f-49a4-88a1-b447fdf43691\":{\"name\":\"shubham Dharade\",\"arrived\":\"14:56\",\"last_seen\":\"15:05\",\"stayed\":4,\"checks\":[\"14:56\",\"14:59\",\"15:03\",\"15:04\",\"15:05\"]},\"d4c00aad-5b6f-47ed-9ddf-7f2c3adcf04d\":{\"name\":\"Salma Shaikh\",\"arrived\":\"14:56\",\"last_seen\":\"14:56\",\"stayed\":0,\"checks\":[\"14:56\"]},\"25fa985b-d0be-4141-80e7-484b0ccabc2d\":{\"name\":\"Prathamesh Pansare\",\"arrived\":\"14:56\",\"last_seen\":\"14:58\",\"stayed\":3,\"checks\":[\"14:56\",\"14:57\",\"14:58\"]},\"b137f8bc-8a40-48c4-82d8-ac8a45baf8ef\":{\"name\":\"Pawar Sambhaji\",\"arrived\":\"14:59\",\"last_seen\":\"14:59\",\"stayed\":0,\"checks\":[\"14:59\"]},\"4469d221-b16b-4c25-b054-d2ee81e055ed\":{\"name\":\"Bhagyashree Sagar\",\"arrived\":\"14:59\",\"last_seen\":\"14:59\",\"stayed\":0,\"checks\":[\"14:59\"]},\"df47d20d-04a0-4c4b-b065-0786c163478e\":{\"name\":\"Prathamesh Pansare\",\"arrived\":\"15:00\",\"last_seen\":\"15:05\",\"stayed\":6,\"checks\":[\"15:00\",\"15:01\",\"15:02\",\"15:03\",\"15:04\",\"15:05\"]},\"1bbf180f-2da6-4df7-9aae-073b0b3202cd\":{\"name\":\"OM PISAL\",\"arrived\":\"15:01\",\"last_seen\":\"15:05\",\"stayed\":5,\"checks\":[\"15:01\",\"15:02\",\"15:03\",\"15:04\",\"15:05\"]},\"22bf9e0c-de76-4090-ba07-4ca7aadb85fb\":{\"name\":\"Pavan Lipane\",\"arrived\":\"15:02\",\"last_seen\":\"15:02\",\"stayed\":1,\"checks\":[\"15:02\"]},\"1f46bfe6-babf-4b44-a767-f37f7ae56f7e\":{\"name\":\"Swati Deshmukh\",\"arrived\":\"15:02\",\"last_seen\":\"15:05\",\"stayed\":4,\"checks\":[\"15:02\",\"15:03\",\"15:04\",\"15:05\"]},\"cd2a5db5-e7c5-4c13-b4aa-a5eae4bfe1c4\":{\"name\":\"Shobha Myana\",\"arrived\":\"15:04\",\"last_seen\":\"15:04\",\"stayed\":0,\"checks\":[\"15:04\"]},\"2a86909f-b4db-41e4-a74a-aeb77e11db18\":{\"name\":\"Jyoti Pawar\",\"arrived\":\"15:06\",\"last_seen\":\"15:23\",\"stayed\":18,\"checks\":[\"15:06\",\"15:07\",\"15:08\",\"15:09\",\"15:10\",\"15:11\",\"15:12\",\"15:13\",\"15:14\",\"15:15\",\"15:16\",\"15:17\",\"15:18\",\"15:19\",\"15:20\",\"15:21\",\"15:22\",\"15:23\"]},\"eb559850-e443-44bb-8548-bcced3b36028\":{\"name\":\"Chaitali Nimse\",\"arrived\":\"15:13\",\"last_seen\":\"15:13\",\"stayed\":0,\"checks\":[\"15:13\"]},\"7e8794f0-5ffe-4c8a-aeef-d120677a03f7\":{\"name\":\"Dhruv Adballe\",\"arrived\":\"15:15\",\"last_seen\":\"15:15\",\"stayed\":0,\"checks\":[\"15:15\"]},\"8cd87c21-2a1d-460f-8f03-32b4088ee751\":{\"name\":\"Swati Deshmukh\",\"arrived\":\"15:19\",\"last_seen\":\"15:19\",\"stayed\":0,\"checks\":[\"15:19\"]},\"496b252c-8b10-475b-b46d-248e594b5a5f\":{\"name\":\"Ramhari Hange\",\"arrived\":\"15:20\",\"last_seen\":\"15:20\",\"stayed\":0,\"checks\":[\"15:20\"]}}"
+	</script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
+	<script type='text/javascript'>
+
+		// pad with a leading zero (for dates & time)
+		function twod(v,n){
+			if (!n) n=2
+			return ('00000'+Number(v)).slice(-n)
+		}
+
+		function showToolTip(e){
+			let tgt=$(e.target)
+			let tgt_p=tgt.parent('.student-row')
+			$('#gmatt-tooltip').detach().appendTo(tgt).fadeIn('fast')
+			$('#gmatt-arr').text(tgt_p.data('arrived'))
+			$('#gmatt-lft').text(tgt_p.data('left'))
+			$('#gmatt-sty').text(tgt_p.data('stayed'))
+			$('#gmatt-ne').text(tgt_p.data('num-entries'))
+		}
+
+		function hideToolTip(e){
+			$('#gmatt-tooltip').hide().detach().appendTo($('body'))
+		}
+		function addWonkyData(txt){
+			if( $('#wonky-data').length==0 ){
+				let dwd=$('<ul/>').attr('id', 'wonky-data')
+				$('#main-table').after(dwd)
+			}
+			if( $('#wonky-data').is(':empty') ){
+				$('<p/>').html("<span class='wonky'></span> There appears to be some odd data in this file:").appendTo('#wonky-data')
+			}
+			$('<li/>').html(txt).appendTo('#wonky-data')
+		}
+		$('document').ready(function(){
+			$('#className').text(className)
+			$('#classDate').empty()
+			if(typeof(dateList)=='undefined'){
+				dateList=[classDate]
+			}
+			$.each(dateList, function(v, t){
+				let o=$('<option/>').attr('value', t).text(t)
+				o.appendTo($('#classDate'))
+			})
+			$('#classDate').val(classDate)
+			$('#meet-startTime').text(startTime)
+			$('#meet-endTime').text(endTime)
+			if(typeof(_activeMeetID)=='undefined'){
+				_activeMeetID=''
+			}
+			$('#meet-meet-id').text(_activeMeetID)
+			$('#logging-info')[$('#gma-log').val()==''?'removeClass':'addClass']( 'showing' )
+
+			let d=$('<div/>')
+			d.attr('id','student-row-header').attr('data-student-name', 'Names')
+			$('<span/>').addClass('student-name').attr('data-html', true).appendTo(d)
+			$('<span/>').addClass('arrived-at sub-column').attr('title','Arrrived at').appendTo(d)
+			$('<span/>').addClass('stayed-for sub-column').attr('title','Length of stay in min').appendTo(d)
+			$('<span/>').addClass('last-seen sub-column').attr('title','Last seen at').appendTo(d)
+			let wwt=[], st=startTime.split(':'), earliestTime=twod(st[0])+':'+twod(st[1]), et=endTime.split(':'), latestTime=twod(et[0])+':'+twod(et[1])
+			let atVersion=3
+			if(_arrivalTimes.indexOf('{"name":')===-1){
+				wwt=JSON.parse(_arrivalTimes)
+				atVersion=1
+			}
+			else{
+				if( _arrivalTimes.indexOf(':true') > -1 ){
+					atVersion=2
+				}
+				$.each(JSON.parse(_arrivalTimes), function( id, checks ) {
+					if(!wwt[checks.name]){
+						wwt[checks.name]=[]
+						wwt[checks.name].checks=[]
+					}
+					if(!wwt[checks.name].checks.includes(checks.arrived)) wwt[checks.name].checks.push(checks.arrived)
+
+					$.each(checks.checks, function( n, m ){
+						let v=atVersion==3?m:n
+						let nn=(v).split(':')
+						let ct=twod(nn[0])+':'+twod(nn[1])
+						if ( ct < earliestTime ) earliestTime=ct
+						if ( ct > latestTime ) latestTime=ct
+						if(wwt[checks.name].checks.includes(v)) return
+						wwt[checks.name].checks.push(v)
+					})
+					if(!wwt[checks.name].checks.includes(checks.last_seen)) wwt[checks.name].checks.push(checks.last_seen)
+				})
+			}
+			$('#meet-earliestTime').text(earliestTime)
+			let meetLength=(et[0]*60+et[1]*1)-(st[0]*60+st[1]*1)+(et[0]*1<st[0]*1?60*24:0)
+			$('#meet-length').text( meetLength )
+			let eat=earliestTime.split(':')
+			let smin=Math.floor(eat[1]*1/5)*5, shr=eat[0]*1
+			let lat=latestTime.split(':')
+			let emin=Math.floor(lat[1]*1/5)*5 + 5, ehr=lat[0]*1
+			smin=eat[1]%5==0?smin-5:smin
+			if (smin===-5){
+				smin=55
+				shr--
+			}
+			let meetDuration=(ehr*60+emin)-(shr*60+smin)+(ehr<shr?60*24:0)
+			for (let nn=0; nn<meetDuration; nn++){
+				let ct=shr*1+':'+twod(smin)
+				let s=$('<span/>').addClass('i-'+ct.replace(':','-')).addClass('cc').attr('title', ct)
+				if (ct==startTime || ct==endTime || nn%5===0){
+					s.addClass(ct==startTime?'m-st':ct==endTime?'m-et':'')
+					if(nn%5===0) s.addClass('col5')
+					let s2=$('<span/>').text(shr*1+':'+twod(smin)).addClass('rotated')
+					s2.appendTo(s)
+				}
+				s.appendTo(d)
+				smin=(smin+1)%60
+				if(smin===0) {
+					shr++
+					shr=shr%24
+				}
+			}
+			d.appendTo('#main-table')
+			let cla=classList.split(',')
+			$('#student-row-header').clone(true,true).removeAttr('id').addClass('spacer-row').appendTo('#main-table')
+			$.each(cla, function( index, value ) {
+				let d=$('#student-row-header').clone(true,true).removeAttr('id').addClass('student-row').addClass('not-present')
+				let lcn=value.trim().toLowerCase()
+				let wr=$('[data-student-name="'+lcn+'"]')
+				if(!wr.length){
+					d.attr('data-student-name', lcn).find('.student-name').text(lcn)
+					d.appendTo('#main-table')
+				}
+				else{
+					addWonkyData("the name <i>'"+value+"'</i> appears more than once in the <b>'classList'</b> variable<br/>&rarr; you can (and probably should) delete the duplicated entries.  Only one row has been added into the table above")
+					wr.addClass('wonky')
+				}
+			});
+			$('#student-row-header').clone(true,true).removeAttr('id').addClass('spacer-row').appendTo('#main-table')
+			$('.student-row .cc, .spacer-row .cc').text('')
+			$('#student-row-header .student-name').text('Names')
+			$('#classDate').change(function(){
+				window.open($('#className').text()+' ('+$(this).val()+').html')
+			})
+			let _atd=JSON.parse(_arrivalTimes)
+			if( $.isEmptyObject(_atd) ){
+				addWonkyData("the <b>'_arrivalTimes'</b> variable is empty so there is no attendance information to display?!?")
+			}
+			$.each(_atd, function( id, checks ) {
+				function earliestArrivalTime(k,j){
+					if( !k ) return j
+					let a=k.split(':'), b=j.split(':')
+					return (twod(a[0])+twod(a[1]) < twod(b[0])+twod(b[1])) ? k : j
+				}
+				function lastSeenTime(k,j){
+					if( !k ) return j
+					let a=k.split(':'), b=j.split(':')
+					return (twod(a[0])+twod(a[1]) > twod(b[0])+twod(b[1])) ? k : j
+				}
+
+				let name=atVersion==1?id:checks.name, lcn=name.toLowerCase()
+				let wr=$('[data-student-name="'+name.trim().toLowerCase()+'"]')
+				if(!wr.length){
+					let mmm=cla.filter(function(nn,b){
+						return nn && nn.toLowerCase().indexOf(lcn)===0
+					})
+					if(mmm.length==1){
+						wr=$('[data-student-name="'+mmm[0].trim().toLowerCase()+'"]')
+					}
+					else{
+						let pm=cla.filter(element => element.toLowerCase().includes(lcn))
+						if(pm.length==1){
+							wr=$('[data-student-name="'+pm[0].trim().toLowerCase()+'"]')
+							wr.addClass('wonky')
+							addWonkyData("the entry <i>'"+name+"'</i> in the <b>'_arrivalTimes'</b> variable does not appear in the <b>'classList'</b> variable... however, it has a partial (and unique) match to <i>'"+pm[0].trim()+"'</i> in the <b>'classList'</b><br/>&rarr; so, the results for <i>'"+name+"'</i> have been merged into the row for <i>'"+pm[0].trim()+"'</i>")
+						}
+						else{
+							addWonkyData("the entry <i>'"+name+"'</i> in the <b>'_arrivalTimes'</b> variable does not uniquely match any of the names in the <b>'classList'</b> variable?!?<br/>&rarr; a row has been appended to the bottom of the table")
+							wr=$('.student-row:last').clone(true).detach()
+							wr.addClass('wonky').attr('data-student-name', lcn).find('.student-name').text(lcn)
+							wr.find('.cc').removeClass('present pattern-0 pattern-1 pattern-2')
+							$('.student-row:last').after(wr)
+						}
+					}
+				}
+				let npe=wr.attr('data-num-entries'), te=!npe||npe==''?1:(1*npe+1)
+				let lat=earliestArrivalTime( wr.attr( 'data-arrived' ), checks.arrived )
+				let lst=lastSeenTime( wr.attr( 'data-left' ), checks.last_seen )
+				let nc=atVersion==3?wwt[name].checks.length:Object.keys(wwt[name].checks).length
+				$(wr).removeClass('not-present')
+				wr.find('.arrived-at').text( lat )
+				wr.find('.stayed-for').text( nc )
+				wr.find('.last-seen').text( lst )
+
+				$.each(wwt[name].checks, function( n, m){
+					let v=atVersion==1?n:m
+					let ct='i-'+v.replace(':','-')
+					$(wr).find('.'+ct).addClass('present').addClass('pattern-'+te%3)
+				})
+				wr.attr( 'data-arrived', lat ).attr( 'data-left', lst ).attr( 'data-stayed', nc ).attr( 'data-num-entries', te )
+			});
+			$('#student-row-header .student-name').text($('.student-row').length+' Names ('+$('.not-present').length+' absent)')
+
+			$('#student-row-header .student-name').click(function(){
+				$('#main-table').toggleClass('show-sub-columns')
+			})
+			$('.student-row :not(.student-name)')
+				.mouseenter(function(e){
+					hideToolTip(e)
+				})
+			$('.student-row .student-name')
+				.mouseenter(function(e){
+					showToolTip(e)
+				})
+				.mouseleave(function(e){
+					hideToolTip(e)
+				})
+			$('#updateOldReportFiles').click(function(){
+				$(this).val('')
+			})
+			.change(function(e){
+
+				$('#louf').empty()
+				const files = e.currentTarget.files;
+				let curHead=$('head')[0].outerHTML
+				let curBody=$('body').html().replace($('#main-table').html(),'').replace($('#gma-log').html(),'').replace($('#wonky-data').html(),'')
+				let curStyles=$('style').text()
+				let oldHead=''
+				$.each(Array.from(files), function(a,f){
+					let fname=f.name
+					let reader = new FileReader();
+					reader.readAsText(f);
+					reader.onload = function(e) {
+						let fc = e.target.result
+						let htmlTxt=(new DOMParser()).parseFromString(fc, "text/html")
+						let cli=!htmlTxt.all['gma-log']?'':htmlTxt.all['gma-log'].value
+						htmlTxt.body.innerHTML=curBody
+						htmlTxt.scripts[3].textContent=document.scripts[3].textContent
+						$(htmlTxt).find('style').text( curStyles )
+						$(htmlTxt).find('#gma-log').val( cli )
+						let blob = new Blob( [ htmlTxt.all[0].outerHTML ] , {type: 'text/HTML;charset=utf-8'} )
+
+						let temp_a = document.createElement("a")
+						temp_a.download = fname
+						temp_a.href = window.webkitURL.createObjectURL(blob)
+						temp_a.click()
+						$('<li/>').text('updated ' + fname).appendTo('#louf')
+					}
+				})
+			})
+        });
+	</script>
+	<style>
+		div#main-table { border-top: 2px solid; border-bottom: 2px solid; box-shadow: #555 2px 2px 2px; }
+		#main-table.show-sub-columns .sub-column{ display: inline-block; }
+		#main-table.show-sub-columns .student-name{ width: 228px; }
+		#main-table #student-row-header .student-name:after { content: '☆'; padding-left: 6px; }
+		#main-table.show-sub-columns  #student-row-header .student-name:after { content: '★'; padding-left: 6px; }
+		.cc { border-left: 1px solid #ccc; flex: 1; max-width: 32px; position: relative;}
+		.rotated { bottom: 10px; display: inline-block; font-size: smaller; left: -8px; position: absolute; transform: rotate(-90deg);  }
+		.col5{ border-left: 2px solid #333;	}
+		.student-row, .spacer-row { display:flex; position: relative; }
+		.student-row:nth-child(2n+1){ background-color: #ddd; }
+		.student-row.not-present , .legend .cc.absent{ background-color: #fcc; }
+		.student-row:nth-child(5n+1) { border-bottom: 1px solid #aaa; }
+		.student-row:hover { background-color: #3b770355; border: 2px solid #738ca0; border-left: 0; border-right: 0; }
+		.student-row.not-present:hover { background-color: #ef9494; }
+		.spacer-row { height: 6px; }
+		.student-name, .spacer-student-name { border-left: 2px solid #333; cursor:pointer; display: inline-block; min-width: 100px; overflow: hidden; text-overflow: ellipsis; text-transform: capitalize; white-space: nowrap; width: 184px;}
+		.student-row .student-name::before { content: "✔ "; color: #3b7703; }
+		.student-row:last-child { border-bottom: 2px solid #333; }
+		.not-present .student-name::before { content: " "; padding-right: 15px; }
+		.cc{ flex:1; }
+		#main-table .cc:last-child { border-right: 2px solid #333; }
+		fieldset { background: #eee; border-radius: 12px; margin: 20px 3px; }
+		legend { font-weight: bold; }
+		.legend p{ margin: 1px; }
+		.legend .cc { background-color: #629235; border: 0px; display: inline-block; height: 20px;max-width: unset; min-width: 11px; padding: 0px 8px; vertical-align: middle;  }
+		.legend .cc.present.grey { background-color: #5B8B2E; }
+		.legend .cc.missing.grey { background-color: #ddd; }
+		.legend .cc.missing.white { background-color: #fff; }
+		.present { background: #3b7703cc; }
+		#student-row-header { background: #777; border-bottom: 3px double #333; color: white; display: flex; font-weight: bold; height: 36px; text-align:center; }
+		#student-row-header .student-name, #student-row-header .sub-column { padding-top: 12px; }
+		#className, #classDate, #meet-startTime, #meet-endTime, #meet-length, #meet-earliestTime, #meet-meet-id{ font-weight:bold; margin-right: 24px; }
+		#meet-length:after { content: " min"; font-weight: normal; }
+		#meet-meet-id:empty:before { content: "n/a"; }
+		#gmatt-tooltip{ position: absolute; background:#cbdbbc; border:2px solid  #3e6914; border-radius:8px; display:none; padding: 4px 8px; left: 134px; top:-4px; z-index:88; }
+		body>#gmatt-tooltip{ display:none!important; }
+		.student-row.not-present #gmatt-tooltip { background:#ffafaf; border-color: #7b3900; }
+		.student-row.not-present #gmatt-tooltip .was-present { display: none; }
+		.student-row.not-present #gmatt-tooltip .was-absent { display: block; }
+		.student-row #gmatt-tooltip .was-absent { display: none; }
+		.sub-column { display: none; text-align: center; width: 48px; }
+		.arrived-at { border-left: 1px solid;  }
+		#student-row-header .arrived-at:before{ content: "Arr"}
+		#student-row-header .stayed-for:before{ content: "min"}
+		#student-row-header .last-seen:before{ content: "Last"}
+		.pattern-2 { background: repeating-linear-gradient( 45deg, #3b7703dd, #3b770377 2px, #3b7703cc 3px, #3b7703ff 3px )!important; }
+		.pattern-0 { background: repeating-linear-gradient( -45deg, #3b7703dd, #3b770377 1px, #3b7703cc 2px, #3b7703ff 3px  )!important; }
+		.m-st { border-left: 5px double #82020266; }
+		.m-et { border-right: 5px double #82020266!important; }
+		#student-row-header .m-st, #student-row-header .m-et { background-color: #82020266;}
+		#questions { background: lightblue; border: 2px solid blue; border-radius: 12px; box-shadow: #bbb 4px 4px 8px; font-weight: bold; opacity: .75; padding: 6px; position: absolute; right: 24px; text-decoration: none; top: 42px; }
+		#questions:hover{ opacity: 1; }
+		#questions:active{ opacity: .333; right: 21px; top: 45px; }
+		#logging-info { display: none; }
+		#logging-info.showing { display: block; }
+		#gma-log { width: 100%; }
+		#gma-log:focus { height: 500px; }
+		#wonky-data { background-color: #fff98a; border: 1px solid #444; border-radius: 12px; padding: 12px; }
+		#wonky-data:empty { display: none; }
+		#wonky-data p { font-weight: bold; margin: 0; }
+		#wonky-data li { margin-left: 20px; }
+		.wonky .student-name::after, #wonky-data .wonky::after { color: red; content: " **"; }
+
+	</style>
+	</head>
+	<body>
+
+	<div id='attendance-report'>
+		<h1>Attendance Report</h1>
+		<p>Class: <span id='className'></span>Meet ID: <span id='meet-meet-id'></span>Date: <select id='classDate'></select> Earliest Arrival(s): <span id='meet-earliestTime'></span>  Start Time: <span id='meet-startTime'></span> End Time: <span id='meet-endTime'></span> Length of Meet: <span id='meet-length'></span>
+			<a id='questions' target='_blank' href='mailto:al@caughey.ca?subject=Questions/Feedback about Attendance report&body=Before sending this message, please check to see whether your issue has been noted on:%0D%0A- the Facebook page [https://www.facebook.com/GoogleMeetAttendance], or %0D%0A- in the videos at my YouTube channel [https://www.youtube.com/channel/UCcD48u9-OBB8HefX4P3KGgQ]  %0D%0A%0D%0AOtherwise, please provide as much information in this email as possible - for example: a description of the problem, screenshots that highlight the issue.  It would be *really* helpful if you also attached the HTML file in question.%0D%0A%0D%0AThanks for your assistance%0D%0A%0D%0AAl'>Questions or Feedback?</a>
+		</p>
+		<div id='main-table'>
+		</div>
+
+		 <fieldset class='legend'>
+			<legend>Legend:</legend>
+			<p><span class='cc absent' title='Student was absent'>The student missed the entire class</span></p>
+			<p><span class='cc present' title='Student was present'>The student was present</span><span class='' title='Student left the meet'> then exited </span><span class='cc present pattern-2' title='Student was present'>rejoined</span><span class='cc present pattern-0' title='Student was present'>and rejoined again</span><span class='cc present' title='Student was present'> etc.</span><span class='cc present pattern-2' title='Student was present'> etc.</span> (the alternating background patterns indicate that the student may have left and rejoined the Meet)</p>
+			<p>To help your eye follow across the page, the table rows alternate between white and <span class='cc missing grey'> grey </span> backgrounds which leads to two subtly different shades of green for the times when the student was present</p>
+			<p><b><u>NB</u></b> - If you want a printed copy of this report, make sure that the 'More settings' &rarr; 'Background graphics' checkbox is checked in the Print dialog,.</p>
+		 </fieldset>
+		 <fieldset id='logging-info' class='legend'>
+			<legend>Logging Information:</legend>
+			<textarea id='gma-log'></textarea>
+		</fieldset>
+		 <fieldset id='up-rev-files' class='legend'>
+			<legend>Up-Rev Prior Attendance Reports:</legend>
+			<p>This allows you to update your old Attendance reports to the latest version of the HTML file.  This will fix a number of issues and errors in the earlier versions of the reports.</p>
+			<ul>
+				<li>Click the 'Choose files' button below and then navigate to the location where your old attendance reports are located.<br/>By default, the attenance reports are saved to your <i>'Downloads'</i> directory but you can (and probably should) move them to a more permanent location.
+				<li>The updated files will get saved once again to your <i>'Downloads'</i> directory.  <br/> Browser security dictates that the files can only be written to that directory... I cannot automatically save them elsewhere.
+				<li><b>NB</b> - you can update several files at once using the <i>&lt;shift&gt;</i> and/or <i>&lt;ctrl&gt;</i> keys to select multiple files (but you will likely have to click <i>'Allow'</i> in a system dialog before the updated reports are download).
+			</ul>
+			<p><input type='file' id='updateOldReportFiles' multiple/></p>
+			<ol id='louf'></ol>
+		</fieldset>
+	</div>
+	<footer>
+		<p>Generated by the <a href='https://chrome.google.com/webstore/detail/fkdjflnaggakjamjkmimcofefhppfljd/publish-accepted?authuser=0&hl=en' target='_blank'>Google Meet Attendance extension</a> v0.7.9</p>
+	</footer>
+	<div id='gmatt-tooltip'>
+		<div class='was-present'>
+			Arrived: <span id='gmatt-arr'></span><br/>
+			Departed: <span id='gmatt-lft'></span><br/>
+			Stayed: <span id='gmatt-sty'></span>min<br/>
+			Entries: <span id='gmatt-ne'></span>
+		</div>
+		<div class='was-absent'>
+			Absent
+		</div>
+	</div>
+</body>
+</html>

@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import csv
 import os
-
+import csv
 # it gets value of variable in the file
 # it takes ('name of the variable','location of the line','collections of line')
 
@@ -65,7 +65,7 @@ def check_integerity_of_html(html_file_name):
     class_name, date_of_class_conducted = html_file_name.split(
         ' ')[1], html_file_name.split(' ')[3][1:-1]
     date_of_class_conducted = date_of_class_conducted.split(')')[0]
-    with open(f'./html_folder/{html_file_name}', encoding='utf8') as html_file:
+    with open(f'./html_folder/{html_file_name}', encoding="utf8") as html_file:
         # it is a list and each element is the line in the document
         lines = html_file.read().split("\n")
 
@@ -146,7 +146,7 @@ def get_names_from_class(list_of_cptble_files_in_the_directory, class_name):
     student_names = []  # it saves the name, and name should be unique
 
     for item in list_of_cptble_files_in_the_directory:
-        with open(f'./html_folder/{item}', encoding='utf8') as html_file:
+        with open(f'./html_folder/{item}', encoding="utf8") as html_file:
             # it is a list and each element is the line in the document
             lines = html_file.read().split("\n")
         if item.split(' ')[1] == class_name:
@@ -180,7 +180,7 @@ def get_stu_attendance_from_class_files(list_of_cptble_files_in_the_directory, c
         inner_array.append(name_of_stu)
         present_count = 0
         for item in list_of_cptble_files_in_the_directory:
-            with open(f'./html_folder/{item}', encoding='utf8') as html_file:
+            with open(f'./html_folder/{item}', encoding="utf8") as html_file:
                 # it is a list and each element is the line in the document
                 lines = html_file.read().split("\n")
             # gets Date of class conducted
@@ -211,7 +211,7 @@ directories = get_list_compatible_files(directories)
 
 for name_of_class in get_list_of_classes(directories):
     students_name_list = get_names_from_class(directories, name_of_class)
-    with open(f'Class {name_of_class} Attendance.csv', 'a', encoding='utf8') as csv_sample:
+    with open(f'Class {name_of_class} Attendance.csv', 'a', encoding="utf8") as csv_sample:
         csv_reader = csv.reader(csv_sample)
         csv_writer = csv.writer(csv_sample)
         for stu_data in get_stu_attendance_from_class_files(directories, name_of_class, *students_name_list):
@@ -219,7 +219,7 @@ for name_of_class in get_list_of_classes(directories):
 
     print(
         f'Successfully written data for Class {name_of_class}, {len(get_stu_attendance_from_class_files(directories, name_of_class, *students_name_list))}')
-    print('-----------------------------------------------------')
+
 
 # print(get_list_of_classes(directories))
 # print(get_names_from_class(directories, get_list_of_classes(directories)[3]))

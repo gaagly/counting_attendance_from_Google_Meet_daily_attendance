@@ -1,0 +1,247 @@
+
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" >
+		let className="Class 8 2020"
+		let classDate="2020-07-07"
+		let dateList=["2020-07-07"]
+		let startTime="11:52"
+		let endTime="11:55"
+		let _activeMeetID="cit-mgnx-wfa"
+		let classList="anusha kumari"
+		let _arrivalTimes="{\"cad71f67-cbaf-48ce-8edd-768a837c4349\":{\"name\":\"anusha kumari\",\"arrived\":\"11:53\",\"last_seen\":\"11:54\",\"stayed\":1,\"checks\":[\"11:53\",\"11:54\"]},\"ce651649-cc73-4e8e-9fb6-477af8dfb06a\":{\"name\":\"anusha kumari\",\"arrived\":\"11:54\",\"last_seen\":\"11:54\",\"stayed\":0,\"checks\":[\"11:54\"]}}"
+	</script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
+	<script type='text/javascript'>
+	
+		// pad with a leading zero (for dates & time)
+		function twod(v,n){
+			if (!n) n=2
+			return ('00000'+Number(v)).slice(-n)
+		}
+		
+		function showToolTip(e){
+			let tgt=$(e.target)
+			let tgt_p=tgt.parent('.student-row')
+			$('#gmatt-tooltip').detach().appendTo(tgt).fadeIn('fast')
+			$('#gmatt-arr').text(tgt_p.data('arrived'))
+			$('#gmatt-lft').text(tgt_p.data('left'))
+			$('#gmatt-sty').text(tgt_p.data('stayed'))
+			$('#gmatt-ne').text(tgt_p.data('num-entries'))
+		}
+
+		function hideToolTip(e){
+			$('#gmatt-tooltip').hide().detach().appendTo($('body'))
+		}
+		
+		$('document').ready(function(){
+			$('#className').text(className)
+			$.each(dateList, function(v, t){
+				let o=$('<option/>').attr('value', t).text(t)
+				o.appendTo($('#classDate'))
+			})
+			$('#classDate').val(classDate)
+			$('#meet-startTime').text(startTime)
+			$('#meet-endTime').text(endTime)
+			$('#meet-meet-id').text(_activeMeetID)
+			if( $('#gma-log').val()!='' ) $('#logging-info').addClass( 'showing' )
+			
+			let d=$('<div/>')
+			d.attr('id','student-row-header').attr('data-student-name', 'Names')
+			$('<span/>').addClass('student-name').attr('data-html', true).appendTo(d)
+			$('<span/>').addClass('arrived-at sub-column').attr('title','Arrrived at').appendTo(d)
+			$('<span/>').addClass('stayed-for sub-column').attr('title','Length of stay in min').appendTo(d)
+			$('<span/>').addClass('last-seen sub-column').attr('title','Last seen at').appendTo(d)
+			let wwt=[], earliestTime=startTime
+			$.each(JSON.parse(_arrivalTimes), function( id, checks ) {
+				if(!wwt[checks.name]){
+					wwt[checks.name]=[]
+					wwt[checks.name].checks=[]
+				}
+				$.each(checks.checks, function(n,m){
+					if ( m < earliestTime ) earliestTime=m
+					if(wwt[checks.name].checks.includes(m)) return
+					wwt[checks.name].checks.push(m)
+				})
+			})
+
+			$('#meet-earliestTime').text(earliestTime)
+			let st=earliestTime.split(':'), et=endTime.split(':')
+			let meetLength=(et[0]*60+et[1]*1)-(st[0]*60+st[1]*1)
+			$('#meet-length').text(meetLength)			
+			let smin=Math.floor(st[1]*1/5)*5, shr=st[0]
+			let emin=Math.floor(et[1]*1/5)*5 + 5, ehr=et[0]
+			smin=st[1]%5==0?smin-5:smin
+			if (smin===-5){
+				smin=55
+				shr--
+			}
+			let meetDuration=(ehr*60+emin)-(shr*60+smin)
+			for (let nn=0; nn<meetDuration; nn++){
+				let ct=shr+':'+twod(smin)
+				let s=$('<span/>').addClass('i-'+ct.replace(':','-')).addClass('cc').attr('title', ct)
+				if (ct==startTime || ct==endTime || nn%5===0){
+					s.addClass(ct==startTime?'m-st':ct==endTime?'m-et':'')
+					if(nn%5===0) s.addClass('col5')
+					let s2=$('<span/>').text(shr+':'+twod(smin)).addClass('rotated')
+					s2.appendTo(s)
+				} 
+				s.appendTo(d)
+				smin=(smin+1)%60
+				if(smin===0) shr++
+			}
+			d.appendTo('#main-table')
+			let cla=classList.split(',')
+			$('#student-row-header').clone(true,true).removeAttr('id').addClass('spacer-row').appendTo('#main-table')
+			$.each(cla, function( index, value ) {
+				let d=$('#student-row-header').clone(true,true).removeAttr('id').addClass('student-row').addClass('not-present')
+				let lcn=value.trim().toLowerCase()
+				d.attr('data-student-name', lcn).find('.student-name').text(lcn)
+				d.appendTo('#main-table')
+			});
+			$('#student-row-header').clone(true,true).removeAttr('id').addClass('spacer-row').appendTo('#main-table')
+			$('.student-row .cc, .spacer-row .cc').text('')
+			$('#student-row-header .student-name').text('Names')
+			$('#classDate').change(function(){
+				window.open($('#className').text()+' ('+$(this).val()+').html')
+			})
+			$.each(JSON.parse(_arrivalTimes), function( id, checks ) {
+				let name=checks.name
+				let wr=$('[data-student-name="'+name.trim().toLowerCase()+'"]')
+				if(!wr.length){
+					let mmm=cla.filter(function(nn,b){
+						return nn && nn.toLowerCase().indexOf(name.toLowerCase())===0
+					})
+					if(mmm.length==1){
+						wr=$('[data-student-name="'+mmm[0].trim().toLowerCase()+'"]')
+					}
+					else{
+						console.log('huh?', name, mmm)
+					}
+				}
+
+				let npe=wr.attr('data-num-entries'), te=!npe||npe==''?1:(1*npe+1)
+				let lat=wr.attr('data-arrived')<checks.arrived?wr.attr('data-arrived'):checks.arrived
+				let lst=wr.attr('data-left')>checks.last_seen?wr.attr('data-left'):checks.last_seen
+				if(!wwt[checks.name].checks.includes(lat)) wwt[checks.name].checks.push(lat)
+				$(wr).removeClass('not-present')
+				wr.find('.arrived-at').text( lat )
+				wr.find('.stayed-for').text( wwt[checks.name].checks.length ) 
+				wr.find('.last-seen').text( lst )
+
+				$.each(wwt[checks.name].checks, function( b, chkt){
+					let ct='i-'+chkt.replace(':','-')
+					$(wr).find('.'+ct).addClass('present').addClass('pattern-'+te%3)
+				})
+				wr.attr( 'data-arrived', lat ).attr( 'data-left', lst ).attr( 'data-stayed', wwt[checks.name].checks.length ).attr( 'data-num-entries', te )
+			});
+			$('#student-row-header .student-name').text($('.student-row').length+' Names ('+$('.not-present').length+' absent)')
+			
+			$('#student-row-header .student-name').click(function(){
+				$('#main-table').toggleClass('show-sub-columns')
+			})
+			$('.student-row :not(.student-name)')
+				.mouseenter(function(e){
+					hideToolTip(e)
+				})
+			$('.student-row .student-name')
+				.mouseenter(function(e){
+					showToolTip(e)
+				})
+				.mouseleave(function(e){
+					hideToolTip(e)
+				})
+        });
+	</script>
+	<style>
+		div#main-table { border-top: 2px solid; border-bottom: 2px solid; box-shadow: #555 2px 2px 2px; }
+		#main-table.show-sub-columns .sub-column{ display: inline-block; }
+		#main-table.show-sub-columns .student-name{ width: 228px; }
+		#main-table #student-row-header .student-name:after { content: '☆'; padding-left: 6px; }
+		#main-table.show-sub-columns  #student-row-header .student-name:after { content: '★'; padding-left: 6px; }
+		.cc { border-left: 1px solid #ccc; flex: 1; max-width: 32px; position: relative;}
+		.rotated { bottom: 10px; display: inline-block; font-size: smaller; left: -8px; position: absolute; transform: rotate(-90deg);  }
+		.col5{ border-left: 2px solid #333;	}
+		.student-row, .spacer-row { display:flex; position: relative; }
+		.student-row:nth-child(2n+1){ background-color: #ddd; }
+		.student-row.not-present , .legend .cc.absent{ background-color: #fcc; }
+		.student-row:nth-child(5n+1) { border-bottom: 1px solid #aaa; }
+		.student-row:hover { background-color: #3b770355; border: 2px solid #738ca0; border-left: 0; border-right: 0; }
+		.student-row.not-present:hover { background-color: #ef9494; }
+		.spacer-row { height: 6px; }
+		.student-name, .spacer-student-name { border-left: 2px solid #333; cursor:pointer; display: inline-block; min-width: 100px; overflow: hidden; text-overflow: ellipsis; text-transform: capitalize; white-space: nowrap; width: 184px;}
+		.student-row .student-name::before { content: "✔ "; color: #3b7703; }
+		.student-row:last-child { border-bottom: 2px solid #333; }
+		.not-present .student-name::before { content: " "; padding-right: 15px; }		
+		.cc{ flex:1; }
+		#main-table .cc:last-child { border-right: 2px solid #333; }
+		fieldset { background: #eee; border-radius: 12px; margin: 20px 3px; }
+		legend { font-weight: bold; }
+		.legend p{ margin: 1px; }
+		.legend .cc { background-color: #629235; border: 0px; display: inline-block; height: 20px;max-width: unset; min-width: 11px; padding: 0px 8px; vertical-align: middle;  }
+		.legend .cc.present.grey { background-color: #5B8B2E; }
+		.legend .cc.missing.grey { background-color: #ddd; }
+		.legend .cc.missing.white { background-color: #fff; }
+		.present { background: #3b7703cc; }
+		#student-row-header { background: #777; border-bottom: 3px double #333; color: white; display: flex; font-weight: bold; height: 36px; text-align:center; }
+		#student-row-header .student-name, #student-row-header .sub-column { padding-top: 12px; }
+		#className, #classDate, #meet-startTime, #meet-endTime, #meet-length, #meet-earliestTime, #meet-meet-id{ font-weight:bold; margin-right: 24px; }
+		#gmatt-tooltip{ position: absolute; background:#cbdbbc; border:2px solid  #3e6914; border-radius:8px; display:none; padding: 4px 8px; left: 134px; top:-4px; z-index:88; }
+		.student-row.not-present #gmatt-tooltip { background:#ffafaf; border-color: #7b3900; }
+		.student-row.not-present #gmatt-tooltip .was-present { display: none; }
+		.student-row.not-present #gmatt-tooltip .was-absent { display: block; }
+		.student-row #gmatt-tooltip .was-absent { display: none; }
+		.sub-column { display: none; text-align: center; width: 48px; }
+		.arrived-at { border-left: 1px solid;  }
+		#student-row-header .arrived-at:before{ content: "Arr"}
+		#student-row-header .stayed-for:before{ content: "min"}
+		#student-row-header .last-seen:before{ content: "Last"}
+		.pattern-2 { background: repeating-linear-gradient( 45deg, #3b7703dd, #3b770377 2px, #3b7703cc 3px, #3b7703ff 3px )!important; }
+		.pattern-0 { background: repeating-linear-gradient( -45deg, #3b7703dd, #3b770377 1px, #3b7703cc 2px, #3b7703ff 3px  )!important; }
+		.m-st { border-left: 5px double #82020266; }
+		.m-et { border-right: 5px double #82020266!important; }
+		#student-row-header .m-st, #student-row-header .m-et { background-color: #82020266;}
+		#questions { background: lightblue; border: 2px solid blue; border-radius: 12px; box-shadow: #bbb 4px 4px 8px; font-weight: bold; opacity: .75; padding: 6px; position: absolute; right: 24px; text-decoration: none; top: 42px; }
+		#questions:hover{ opacity: 1; }
+		#questions:active{ opacity: .333; right: 21px; top: 45px; }
+		#logging-info { display: none; }
+		#logging-info.showing { display: block; }
+		#gma-log { width: 100%; }
+		#gma-log:focus { height: 500px; }
+	</style>
+	</head>
+	<body>
+	<div id='attendance-report'><h1>Attendance Report</h1>
+	<p>Class: <span id='className'></span>Meet ID: <span id='meet-meet-id'></span>Date: <select id='classDate'></select> Earliest Arrival(s): <span id='meet-earliestTime'></span>  Start Time: <span id='meet-startTime'></span> End Time: <span id='meet-endTime'></span> Length of Meet: <span id='meet-length'></span><a id='questions' target='_blank' href='mailto:al@caughey.ca?subject=Questions/Feedback about Attendance report&body=Please provide as much information in this email as possible - for example: a description of the problem, screenshots that highlight the issue.  It would be *really* helpful if you also attached the HTML file in question.%0D%0A%0D%0AThanks for your assistance%0D%0A%0D%0AAl'>Questions or Feedback?</a></p></div>
+	<div id='main-table'>
+	</div>
+	
+	<div id='gmatt-tooltip'>
+		<div class='was-present'>
+			Arrived: <span id='gmatt-arr'></span><br/>
+			Departed: <span id='gmatt-lft'></span><br/>
+			Stayed: <span id='gmatt-sty'></span>min<br/>
+			Entries: <span id='gmatt-ne'></span>
+		</div>
+		<div class='was-absent'>
+			Absent
+		</div>
+	</div>
+	 <fieldset class='legend'>
+		<legend>Legend:</legend>
+		<p><span class="cc absent" title="Student was absent">The student missed the entire class</span></p>
+		<p><span class="cc present" title="Student was present">The student was present</span><span class="" title="Student left the meet"> then exited </span><span class="cc present pattern-2" title="Student was present">rejoined</span><span class="cc present pattern-0" title="Student was present">and rejoined again</span><span class="cc present" title="Student was present"> etc.</span><span class="cc present pattern-2" title="Student was present"> etc.</span> (the alternating background patterns indicate that the student may have left and rejoined the Meet)</p>
+		<p>To help your eye follow across the page, the table rows alternate between white and <span class='cc missing grey'> grey </span> backgrounds which leads to two subtly different shades of green for the times when the student was present</p>
+		<p><b><u>NB</u></b> - If you want a printed copy of this report, make sure that the 'More settings' &rarr; 'Background graphics' checkbox is checked in the Print dialog,.</p>
+	 </fieldset>
+	 <fieldset id='logging-info' class='legend'>
+		<legend>Logging Information:</legend>
+		<textarea id='gma-log'></textarea>
+	</fieldset>
+	</body>
+	<footer>
+	<p>Generated by the <a href='https://chrome.google.com/webstore/detail/fkdjflnaggakjamjkmimcofefhppfljd/publish-accepted?authuser=0&hl=en' target='_blank'>Google Meet Attendance extension</a></p>
+	</footer>
+</html>
