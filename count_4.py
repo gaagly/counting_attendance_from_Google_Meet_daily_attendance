@@ -188,7 +188,10 @@ def get_stu_attendance_from_class_files(list_of_cptble_files_in_the_directory, c
                 lines[check_word_in_line(lines, 'let classDate')[0]])
             if search_name(lines[check_word_in_line(lines, 'let _arrivalTimes')[0]].lower(), name_of_stu.lower()) == "Present":
                 inner_array.append(date_of_class_conducted)
-                present_count += 1
+                # many times, more than one html file is generated
+                # it counts present one present per one day
+                if inner_array[-2] != date_of_class_conducted:
+                    present_count += 1
             else:
                 inner_array.append("absent")
             # adding a check that data should not be vague
