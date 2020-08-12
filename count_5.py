@@ -1,6 +1,8 @@
 from bs4 import BeautifulSoup
 import csv
 import os
+import datetime
+from datetime import datetime, date, time
 
 # it gets value of variable in the file
 # it takes ('name of the variable','location of the line','collections of line')
@@ -69,13 +71,17 @@ def check_integerity_of_html(html_file_name):
         # it is a list and each element is the line in the document
         lines = html_file.read().split("\n")
 
-    in_class_name, in_classdate = get_value_of_variable(lines[check_word_in_line(lines, 'let className')[
-                                                        0]]), get_value_of_variable(lines[check_word_in_line(lines, 'let classDate')[0]])
-    in_class_name = in_class_name.split(' ')[1]
+    try:
+        in_class_name, in_classdate = get_value_of_variable(lines[check_word_in_line(lines, 'let className')[
+                                                            0]]), get_value_of_variable(lines[check_word_in_line(lines, 'let classDate')[0]])
+        in_class_name = in_class_name.split(' ')[1]
 
-    if class_name == in_class_name:
-        if date_of_class_conducted == in_classdate:
-            return True
+        if class_name == in_class_name:
+            if date_of_class_conducted == in_classdate:
+                return True
+    except:
+        print(f'cannot read {html_file_name}')
+        return False
 
     return False
 
@@ -214,7 +220,9 @@ directories = get_list_compatible_files(directories)
 
 for name_of_class in get_list_of_classes(directories):
     students_name_list = get_names_from_class(directories, name_of_class)
-    with open(f'Class {name_of_class} Attendance.csv', 'a', encoding='utf8') as csv_sample:
+    time_stamp = datetime.now()
+
+    with open(f'Class {name_of_class} Attendance {str(time_stamp.strftime("%Y%m%d"))} {str(time_stamp.strftime("%H%M%S"))}.csv', 'a', encoding='utf8') as csv_sample:
         csv_reader = csv.reader(csv_sample)
         csv_writer = csv.writer(csv_sample)
         for stu_data in get_stu_attendance_from_class_files(directories, name_of_class, *students_name_list):
